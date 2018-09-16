@@ -1,0 +1,35 @@
+{
+  "name": "oauth",
+  "version": "1.0.0",
+  "description": "login strategies using passport.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hit-11/OAuth.git"
+  },
+  "author": "hpeswani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hit-11/OAuth/issues"
+  },
+  "homepage": "https://github.com/hit-11/OAuth#readme",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.6.1",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}
