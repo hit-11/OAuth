@@ -20,8 +20,11 @@ var users = require('./routes/users');
 //Init app
 var app = express();
 
+var engine = require('ejs-locals');
 //Setting up view engine
-app.set('view engine','ejs')
+app.engine('ejs',engine);
+app.set('view engine','ejs');
+
 
 //bodyparser middleware
 app.use(bodyParser.json());
@@ -66,10 +69,11 @@ app.use(flash());
 //global vars
 app.use(function (req,res,next){
     res.locals.success_msg = req.flash('success_msg');
+    console.log("succ "+(res.locals.success_msg));
     res.locals.error_msg = req.flash('error_msg');
-    res.locals.error = re.flash('error');
+    res.locals.error = req.flash('error');
     next();
-})
+});
 
 app.use('/',routes);
 app.use('/user',users);
